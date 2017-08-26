@@ -3,7 +3,9 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
 function openBlog() {
+	// Consider deleting or placing in another file.
 	window.open("https://shiftay.wordpress.com/");
 }
 
@@ -29,7 +31,6 @@ var main = (function($) { var _ = {
 
 		// Side of main wrapper (must match "misc.main-side" in _vars.scss).
 			mainSide: 'right'
-
 	},
 
 	/**
@@ -434,7 +435,7 @@ var main = (function($) { var _ = {
 
 					// Slide.
 						_.$thumbnails.child
-						// Create elements.
+						// If this is final slide, link in opening the blog. Final Slide must always be blog!
 							if (_.slides.length == _.$thumbnails.children().length - 1)
 								s.$slide = $('<div class="slide"><div class="caption"></div><div class="image" onclick="openBlog()"></div></div>');
 							else
